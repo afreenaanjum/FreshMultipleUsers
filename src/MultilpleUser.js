@@ -34,7 +34,7 @@ class MultipleField extends React.Component{
 					<input 
 						type='text' 
 						placeholder = 'Enter name'
-						onChange={this.handleNameChange} 
+						onChange={this.handleNameChange}      
 						value = {this.state.name.value} 
 					/>
 					 {
