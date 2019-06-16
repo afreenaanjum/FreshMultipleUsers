@@ -15,8 +15,8 @@ class MultipleField extends React.Component{
 		
 		const name = e.target.value
 		this.setState((prevState)=>({
-			name: Object.assign(prevState.name,{ id : this.props.position, value : name})
-		})) 	
+			name: Object.assign({},prevState.name,{ id : this.props.position, value : name})
+		}))	
 		this.props.handleNameChange(this.state.name, this.props.position)
 	}
 
@@ -34,11 +34,11 @@ class MultipleField extends React.Component{
 					<input 
 						type='text' 
 						placeholder = 'Enter name'
-						onChange={this.handleNameChange}      
+						onChange={this.handleNameChange}         
 						value = {this.state.name.value} 
 					/>
 					 {
-						 this.props.position != 1 && <button value = {this.props.position} onClick = {this.handleRemove}>Remove</button>
+						 this.props.position != 0 && <button value = {this.props.position} onClick = {this.handleRemove}>Remove</button>
 					 }
 				</label>
 			</div>
